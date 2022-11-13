@@ -2,6 +2,8 @@
   "name": "floema",
   "version": "0.0.0",
   "scripts": {
+    "frontend:build": "webpack --progress --config webpack.config.build.js",
+    "frontend:development": "webpack serve --progress --config webpack.config.development.js",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
