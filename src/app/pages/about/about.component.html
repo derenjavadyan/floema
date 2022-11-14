@@ -1,1 +1,36 @@
-<p>about works!</p>
+<div class="about">
+  <div class="about__wrapper">
+    <section class="about__gallery">
+      <ng-container
+        class="about__gallery__wrapper"
+        *ngFor="let gallery of galleries"
+      >
+        <figure class="about__gallery__media">
+          <img class="about__gallery__media__image" [alt]="" [src]="" />
+        </figure>
+      </ng-container>
+    </section>
+
+    <div class="title">
+      <h2 class="title__heading">
+        Creating new dialogues between threads and metal
+      </h2>
+    </div>
+
+    <section class="about__content">
+      <div class="about__content__wrapper">
+        <p class="about__content__label"></p>
+        <div class="about__content__description"></div>
+        <figure class="about__content__media">
+          <img [src]="" [alt]="" class="about__content__media__image" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="about__hoghlight">
+      <div class="about__highlight__wrapper">
+        <h3 class="about__highlight__title"></h3>
+      </div>
+    </section>
+  </div>
+</div>

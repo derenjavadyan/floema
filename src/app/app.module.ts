@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './pages/about/about.component';
-import { CollectionsComponent } from './pages/collections/collections.component';
+import { CollectionComponent } from './pages/collection/collection.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavigationComponent } from './partials/navigation/navigation.component';
@@ -14,17 +14,14 @@ import { PreloaderComponent } from './partials/preloader/preloader.component';
   declarations: [
     AppComponent,
     AboutComponent,
-    CollectionsComponent,
+    CollectionComponent,
     DetailsComponent,
     HomeComponent,
     NavigationComponent,
-    PreloaderComponent
+    PreloaderComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
