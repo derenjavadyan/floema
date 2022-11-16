@@ -1,5 +1,10 @@
 .detail {
+  @extend %cover !optional;
+  @extend %center !optional;
+
   &__wrapper {
+    display: flex;
+    align-items: center;
   }
   &__media {
   }

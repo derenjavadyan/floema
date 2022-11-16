@@ -1,10 +1,11 @@
 <div class="detail">
   <div class="detail__wrapper">
+    <div class="detail__media"></div>
     <figure class="detail__media">
-      <img src="" alt="" class="detail__media__image" />
+      <img [src]="product?.img" alt="img" class="detail__media__image" />
     </figure>
     <div class="detail__information">
-      <p class="detail__information__collection"></p>
+      <p class="detail__information__collection">{{ product?.collection }}</p>
       <h1 class="detail__information__title"></h1>
 
       <div class="detail__information__content">
@@ -26,3 +27,5 @@
     </div>
   </div>
 </div>
+
+<div class="test"></div>
