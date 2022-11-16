@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./styles/utils/variables.scss";
+@import "./styles/utils/functions.scss";
+@import "./styles/utils/mixins.scss";
+@import "./styles/utils/vendors.scss";
+@import "./styles/utils/responsive.scss";
+
+@import "./styles/shared/descriptions.scss";
+@import "./styles/shared/titles.scss";
+
+@import "./styles/base/fonts.scss";
+@import "./styles/base/reset.scss";
+@import "./styles/base/base.scss";
+
+@import "./styles/utils/responsive.scss";
