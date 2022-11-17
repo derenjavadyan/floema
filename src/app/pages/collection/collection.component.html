@@ -1,19 +1,27 @@
 <div class="collections">
   <div class="collections__wrapper">
-
-
-    <div class="collections__titles" *ngFor="let collection of collectionTitles">
-      <div class="collections__titles__label">{{collection.label | uppercase}}</div>
-      <div [ngStyle]="{'width':'40px'}"></div>
-      <div class="collections__titles__title">{{collection.title}}</div>
+    <div
+      class="collections__titles"
+      *ngFor="let collection of collectionTitles"
+    >
+      <div class="collections__titles__label">
+        {{ collection.label | uppercase }}
+      </div>
+      <div class="collections__titles__title">{{ collection.title }}</div>
     </div>
-
 
     <div class="collections__gallery">
       <div class="collections__gallery__wrapper">
         <a href="" class="collections__gallery__link">
-          <figure class="collections__gallery__media">
-            <img src="" alt="" class="collections__gallery__media__image" />
+          <figure
+            class="collections__gallery__media"
+            *ngFor="let collection of collectionGallery"
+          >
+            <img
+              [src]="collection?.img"
+              alt=""
+              class="collections__gallery__media__image"
+            />
           </figure>
         </a>
       </div>
@@ -27,3 +35,10 @@
   </div>
 </div>
 
+<!-- <div [ngStyle]="{'width':'40px'}"></div> -->
+<!-- <div class="collections__titles" *ngFor="let collection of collectionTitles">
+      <div class="collections__titles__label">
+        {{ collection.label | uppercase }}
+      </div>
+      <div class="collections__titles__title">{{ collection.title }}</div>
+    </div> -->
