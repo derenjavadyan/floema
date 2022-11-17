@@ -15,6 +15,5 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.product = this.productsService.filterProduct(this.myId);
-    console.log(this.product);
   }
 }

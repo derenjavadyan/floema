@@ -3,25 +3,19 @@ export interface ProductDetail {
   img: string;
   collection: string;
   title: string;
-  highlightIcon: highlightIcon[];
-  highlightText: highlightText[];
-  itemTitle: itemTitle[];
-  itemDescription: itemDescription[];
+  highlights: highlights[];
+  items: items[];
   shop: string;
 }
 
-interface highlightIcon {
+interface highlights {
   icon: string;
-}
-
-interface highlightText {
   text: string;
 }
 
-interface itemTitle {
+interface items {
   title: string;
-}
-
-interface itemDescription {
   desc: string;
 }
+
+

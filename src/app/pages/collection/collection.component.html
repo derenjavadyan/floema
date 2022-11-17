@@ -1,9 +1,14 @@
 <div class="collections">
   <div class="collections__wrapper">
-    <div class="collections__titles">
-      <div class="collections__titles__label"></div>
-      <div class="collections__titles__title"></div>
+
+
+    <div class="collections__titles" *ngFor="let collection of collectionTitles">
+      <div class="collections__titles__label">{{collection.label | uppercase}}</div>
+      <div [ngStyle]="{'width':'40px'}"></div>
+      <div class="collections__titles__title">{{collection.title}}</div>
     </div>
+
+
     <div class="collections__gallery">
       <div class="collections__gallery__wrapper">
         <a href="" class="collections__gallery__link">
@@ -21,3 +26,4 @@
     </div>
   </div>
 </div>
+

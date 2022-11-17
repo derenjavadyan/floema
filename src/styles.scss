@@ -1,3 +1,5 @@
+@import "./styles/base/reset.scss";
+
 @import "./styles/utils/variables.scss";
 @import "./styles/utils/functions.scss";
 @import "./styles/utils/mixins.scss";
@@ -8,7 +10,6 @@
 @import "./styles/shared/titles.scss";
 
 @import "./styles/base/fonts.scss";
-@import "./styles/base/reset.scss";
 @import "./styles/base/base.scss";
 
 @import "./app/pages/about/about.component.scss";
