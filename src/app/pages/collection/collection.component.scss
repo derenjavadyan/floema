@@ -1,15 +1,43 @@
 .collections {
+  @extend %cover !optional;
+  background: var(--color-quicksand);
+  color: var(--color-quarter-spanish-white);
+
   &__wrapper {
+    @extend %cover !optional;
+    overflow: hidden;
   }
+
   &__titles {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   &__titles__label {
+    @extend %description-12 !optional;
+
+    letter-spacing: 0.1rem;
+    text-align: center;
+    margin: 0 3rem;
   }
   &__titles__title {
+    @extend %title-200 !optional;
+
+    padding-top: 2rem;
   }
   &__gallery {
+    @extend %cover !optional;
+    display: flex;
   }
   &__gallery__wrapper {
+    display: flex;
+    align-items: center;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
   }
   &__gallery__link {
   }

@@ -1,34 +1,95 @@
 .detail {
+  @extend %cover !optional;
+  @extend %center !optional;
+
+  background: var(--color-quicksand);
+  color: var(--color-white);
+
   &__wrapper {
+    display: flex;
+    align-items: center;
   }
+
   &__media {
+    width: 55.4rem;
+    height: 78.2rem;
+    position: relative;
   }
+
   &__media__image {
+    @extend %center !optional;
+    width: 100%;
+    object-fit: cover;
   }
+
   &__information {
+    padding-left: 8.2rem
   }
+
   &__information__collection {
+    @extend %description-12 !optional;
+    margin-bottom: 4rem;
   }
+
   &__information__title {
+    @extend %title-120 !optional;
+    max-width: 60rem;
   }
+
   &__information__content {
+    padding-left: 18rem;
   }
+
   &__information__highlights {
+    margin-top: 6rem;
   }
   &__information__highlight {
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child){
+      margin-top: 4rem;
+    }
   }
+
   &__information__highlight__icon {
+    border: 1px solid var(--color-white);
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    margin-right: 3rem;
   }
+
   &__information__highlight__text {
+    @extend %description-16 !optional;
+    width: 30rem;
   }
+
   &__information__list {
+    margin-top: 4rem;
   }
+
   &__information__item {
+    display: flex;
+
+    &:not(:first-child) {
+      margin-top: 4rem
+    }
   }
+
   &__information__item__title {
+    @extend %description-12 !optional;
+    padding-right: 2.5rem;
+    width: 10rem;
   }
+
   &__information__item__description {
+    @extend %description-16 !optional;
+    max-width: 44rem;
   }
+
   &__information__link {
+    @extend %title-30 !optional;
+    margin-top: 3rem;
   }
 }

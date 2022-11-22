@@ -1,3 +1,5 @@
+@import "./styles/base/reset.scss";
+
 @import "./styles/utils/variables.scss";
 @import "./styles/utils/functions.scss";
 @import "./styles/utils/mixins.scss";
@@ -8,7 +10,12 @@
 @import "./styles/shared/titles.scss";
 
 @import "./styles/base/fonts.scss";
-@import "./styles/base/reset.scss";
 @import "./styles/base/base.scss";
 
-@import "./styles/utils/responsive.scss";
+@import "./app/pages/about/about.component.scss";
+@import "./app/pages/collection/collection.component.scss";
+@import "./app/pages/details/details.component.scss";
+@import "./app/pages/home/home.component.scss";
+
+@import "./app/partials/navigation/navigation.component.scss";
+@import "./app/partials/preloader/preloader.component.scss";

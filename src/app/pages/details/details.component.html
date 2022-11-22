@@ -1,28 +1,34 @@
 <div class="detail">
   <div class="detail__wrapper">
     <figure class="detail__media">
-      <img src="" alt="" class="detail__media__image" />
+      <img [src]="product?.img" alt="img" class="detail__media__image" />
     </figure>
     <div class="detail__information">
-      <p class="detail__information__collection"></p>
-      <h1 class="detail__information__title"></h1>
+
+
+      <p class="detail__information__collection">{{ product?.collection | uppercase}}</p>
+      <h1 class="detail__information__title">{{product?.title | titlecase}}</h1>
+
 
       <div class="detail__information__content">
         <div class="detail__information__highlights">
-          <p class="detail__information__highlight">
-            <svg class="detail__information__highlight__icon"></svg>
-            <span class="detail__information__highlight__text"></span>
+          <p class="detail__information__highlight" *ngFor="let highlight of product?.highlights">
+            <svg class="detail__information__highlight__icon">{{highlight?.icon}}</svg>
+            <span class="detail__information__highlight__text">{{highlight?.text}}</span>
           </p>
         </div>
 
         <div class="detail__information__list">
-          <p class="detail__information__item">
-            <strong class="detail__information__item__title"></strong>
-            <span class="detail__information__item__description"></span>
+          <p class="detail__information__item" *ngFor="let item of product?.items">
+            <strong class="detail__information__item__title">{{item?.title}}</strong>
+            <span class="detail__information__item__description">{{item?.desc}}</span>
           </p>
         </div>
+
         <a href="" target="_blank" class="detail__information__link"></a>
+
       </div>
     </div>
   </div>
 </div>
+
