@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewChecked } from '@angular/core';
+import { gsap } from 'gsap';
+import { Router } from '@angular/router';
 
 interface Collection {
   label: string;
@@ -28,7 +30,9 @@ interface Content {
   templateUrl: './collection.component.html',
   styleUrls: ['./collection.component.scss'],
 })
-export class CollectionComponent {
+export class CollectionComponent
+  implements OnInit, OnDestroy, AfterViewChecked
+{
   public collectionTitles: Collection[] = [
     {
       label: 'collection one',
@@ -74,4 +78,11 @@ export class CollectionComponent {
       ],
     },
   ];
+
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {}
+  ngAfterViewChecked(): void {}
+
+  ngOnDestroy(): void {}
 }
