@@ -12,14 +12,7 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // change() {
-  //   this.animateMove();
-  //   setTimeout(() => {
-  //     this.router.navigate(['/collection']);
-  //   }, 1000);
-  // }
-
-  changePromise() {
+  change() {
     const changeRoute = new Promise<string>((resolve) => {
       resolve('Promise Resolved');
     });
@@ -40,4 +33,37 @@ export class NavigationComponent implements OnInit {
   animateMove() {
     gsap.to('.navigation', { rotation: 27, x: 100, duration: 1 });
   }
+
+  animateBack() {
+    gsap.to('.navigation', { rotation: 0, x: 100, duration: 1 });
+  }
 }
+
+//Promise
+// changePromise() {
+//   const changeRoute = new Promise<string>((resolve) => {
+//     resolve('Promise Resolved');
+//   });
+
+//   changeRoute
+//     .then(() => {
+//       this.animateMove();
+//     })
+//     .then(() => {
+//       this.router.navigate(['/collection']);
+//     });
+// }
+
+// async &await
+// changePromise = async () => {
+//   const animate = await this.animateIn;
+//   const route = await this.router.navigate(['/collection']);
+// };
+
+//working
+// change() {
+//   this.animateMove();
+//   setTimeout(() => {
+//     this.router.navigate(['/collection']);
+//   }, 1000);
+// }
