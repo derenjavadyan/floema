@@ -12,22 +12,14 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  change() {
-    const changeRoute = new Promise<string>((resolve) => {
-      resolve('Promise Resolved');
-    });
-
-    changeRoute
-      .then(() => {
-        this.animateMove();
-      })
-      .then(() => {
-        this.router.navigate(['/collection']);
-      });
-  }
-
   animateIn() {
     gsap.from('.navigation', { duration: 4, opacity: 0, delay: 0 });
+  }
+
+  animateOut() {
+    gsap.from('.navigation', { duration: 1, opacity: 0, delay: 0 }).then(() => {
+      this.router.navigate(['/collection']);
+    });
   }
 
   animateMove() {

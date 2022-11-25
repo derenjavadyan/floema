@@ -81,7 +81,9 @@ export class CollectionComponent
 
   constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    gsap.from('.collections', { duration: 1, opacity: 0, delay: 0 });
+  }
   ngAfterViewChecked(): void {}
 
   ngOnDestroy(): void {}
